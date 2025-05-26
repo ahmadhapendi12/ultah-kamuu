@@ -1,0 +1,138 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', sans-serif;
+  background: linear-gradient(to bottom, #e0f7fa, #ffffff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.container {
+  background: #ffffffcc;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+h1 {
+  color: #007acc;
+  margin-bottom: 10px;
+}
+
+.tanggal {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+p {
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.2em;
+  text-align: justify;
+}
+
+.foto-safira {
+  width: 100%;
+  max-width: 200px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.wa-button {
+  display: inline-block;
+  margin-top: 20px;
+  background-color: #25D366;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.wa-button:hover {
+  background-color: #1ebd5a;
+}
+.confetti {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background-color: hsl(var(--hue), 70%, 60%);
+  top: -10px;
+  border-radius: 50%;
+  animation: confettiFall 5s linear infinite;
+  pointer-events: none;
+  z-index: 4;
+  opacity: 0.8;
+}
+
+@keyframes confettiFall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+  }
+}
+
+.love {
+  position: fixed;
+  font-size: 20px;
+  color: #ff4da6;
+  animation: loveRise 6s ease-in-out infinite;
+  user-select: none;
+  z-index: 3;
+  opacity: 0.8;
+}
+
+@keyframes loveRise {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(-100vh) scale(1.3);
+    opacity: 0;
+  }
+}
+.typing-text {
+  font-family: 'Pacifico', cursive;
+  font-size: 1.5em;
+  color: #004aad;
+  margin-top: 20px;
+  white-space: pre-line;
+  min-height: 100px;
+}
+/* Tambahkan di bagian <style> */
+.love {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  background-image: url('https://cdn-icons-png.flaticon.com/512/833/833472.png');
+  background-size: cover;
+  animation: floatLove linear infinite;
+  z-index: 998;
+}
+@keyframes floatLove {
+  from {
+    top: -30px;
+    opacity: 1;
+    transform: translateX(0) rotate(0deg);
+  }
+  to {
+    top: 100vh;
+    opacity: 0;
+    transform: translateX(30px) rotate(360deg);
+  }
+}
